@@ -1,0 +1,4 @@
+@(buildWrapper: _root_.jenkins.model.AnsiColorBuildWrapper)
+<hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@@0.3.1">
+    <colorMapName>@buildWrapper.colorMapName</colorMapName>
+</hudson.plugins.ansicolor.AnsiColorBuildWrapper>

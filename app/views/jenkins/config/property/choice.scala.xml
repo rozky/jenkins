@@ -1,0 +1,12 @@
+@(param: _root_.jenkins.model.ChoiceParameter)
+<hudson.model.ChoiceParameterDefinition>
+    <name>@param.name</name>
+    <description>@param.description</description>
+    <choices class="java.util.Arrays$ArrayList">
+        @for(choice <- param.choices) {
+            <a class="string-array">
+                <string>@choice</string>
+            </a>
+        }
+    </choices>
+</hudson.model.ChoiceParameterDefinition>

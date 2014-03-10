@@ -1,0 +1,6 @@
+@(param: _root_.jenkins.model.StringParameter)
+<hudson.model.StringParameterDefinition>
+    <name>@param.name</name>
+    <description>@param.description</description>
+    <defaultValue>@param.defaultValue</defaultValue>
+</hudson.model.StringParameterDefinition>

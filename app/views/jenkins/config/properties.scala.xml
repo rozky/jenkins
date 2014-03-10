@@ -1,0 +1,16 @@
+@(properties: List[_root_.jenkins.model.Parameter])
+
+@if(!properties.isEmpty) {
+<hudson.model.ParametersDefinitionProperty>
+    <parameterDefinitions>
+        @for(property <- properties) {
+            @property match {
+                case p: _root_.jenkins.model.StringParameter =>  { @jenkins.config.property.string(p) }
+                case p: _root_.jenkins.model.BooleanParameter => { @jenkins.config.property.boolean(p) }
+                case p: _root_.jenkins.model.ChoiceParameter => { @jenkins.config.property.choice(p) }
+            }
+        }
+    </parameterDefinitions>
+</hudson.model.ParametersDefinitionProperty>
+}
+

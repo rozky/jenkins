@@ -1,0 +1,4 @@
+@(buildWrapper: _root_.jenkins.model.BuildNameSetterBuildWrapper)
+<org.jenkinsci.plugins.buildnamesetter.BuildNameSetter plugin="build-name-setter@@1.3">
+    <template>@buildWrapper.template</template>
+</org.jenkinsci.plugins.buildnamesetter.BuildNameSetter>

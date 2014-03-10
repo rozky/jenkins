@@ -1,0 +1,15 @@
+@(buildWrappers: Option[List[_root_.jenkins.model.BuildWrapper]])
+
+@if(buildWrappers.isDefined && !buildWrappers.isEmpty) {
+<buildWrappers>
+    @for(buildWrapper <- buildWrappers.get) {
+        @buildWrapper match {
+            case bw: _root_.jenkins.model.AnsiColorBuildWrapper =>  { @jenkins.config.buildWrapper.ansiColor(bw) }
+            case bw: _root_.jenkins.model.BuildNameSetterBuildWrapper =>  { @jenkins.config.buildWrapper.buildNameSetter(bw) }
+        }
+    }
+</buildWrappers>
+} else {
+<buildWrappers/>
+}
+

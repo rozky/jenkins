@@ -1,0 +1,6 @@
+@(param: _root_.jenkins.model.BooleanParameter)
+<hudson.model.BooleanParameterDefinition>
+    <name>@param.name</name>
+    <description>@param.description</description>
+    <defaultValue>@param.defaultValue</defaultValue>
+</hudson.model.BooleanParameterDefinition>
